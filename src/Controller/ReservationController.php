@@ -34,4 +34,12 @@ class ReservationController extends AbstractFOSRestController
             return new JsonResponse(['messages' => $exception->getErrorMessages()], Response::HTTP_BAD_REQUEST);
         }
     }
+
+    /**
+     * @Rest\Get("/apartments/{id}/reservations")
+     */
+    public function getReservations(Apartment $apartment): JsonResponse
+    {
+        return new JsonResponse(['reservations' => $apartment->getReservations()->toArray()], Response::HTTP_OK);
+    }
 }
