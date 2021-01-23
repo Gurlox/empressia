@@ -12,7 +12,9 @@
         <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
         <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
-        <server name="SYMFONY_PHPUNIT_VERSION" value="8.5" />
+        <server name="SYMFONY_PHPUNIT_VERSION" value="9.5.1" />
+        <env name="DATABASE_URL" value="mysql://cool_user:cool_password@api_mysql_test/api" />
+        <env name="BOOTSTRAP_RESET_DATABASE" value="1" />
     </php>
 
     <testsuites>
